@@ -1,0 +1,22 @@
+<resources>
+    <string name="app_name">IoTPics</string>
+    <string name="server_uri">Server URI</string>
+    <string name="client_id">Client ID</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="connect">Connect</string>
+    <string name="prefill">Prefill</string>
+    <string name="mandatory_field">Mandatory Field</string>
+    <string name="optional_fields">Optional Fields</string>
+    <string name="disconnect">Disconnect</string>
+    <string name="subscribe">Subscribe</string>
+    <string name="unsubscribe">Unsubscribe</string>
+    <string name="publish">Send Request</string>
+    <string name="topic">Topic</string>
+    <string name="configure_device_as">Configure Device As</string>
+    <string name="camera">Camera</string>
+    <string name="supervisor">Supervisor</string>
+    <string name="await_response_topic">Await Response Topic</string>
+    <string name="send_request_topic">Send Request Topic</string>
+    <string name="back">Back</string>
+</resources>

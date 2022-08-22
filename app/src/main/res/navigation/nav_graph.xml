@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/connectFragment">
+
+    <fragment
+        android:id="@+id/connectFragment"
+        android:name="com.ubb.iotpics.fragments.ConnectFragment"
+        android:label="connect_fragment"
+        tools:layout="@layout/connect_fragment" >
+        <action
+            android:id="@+id/action_connectFragment_to_principalFragment"
+            app:destination="@id/principalFragment"
+            app:popUpTo="@id/connectFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/principalFragment"
+        android:name="com.ubb.iotpics.fragments.PrincipalFragment"
+        android:label="PrincipalFragment" >
+        <action
+            android:id="@+id/action_principalFragment_to_connectFragment"
+            app:destination="@id/connectFragment"
+            app:popUpTo="@id/principalFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_principalFragment_to_imageviewFragment"
+            app:destination="@id/imageviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageviewFragment"
+        android:name="com.ubb.iotpics.fragments.ImageviewFragment"
+        android:label="ImageviewFragment" >
+        <action
+            android:id="@+id/action_imageviewFragment_to_principalFragment"
+            app:destination="@id/principalFragment"
+            app:popUpTo="@id/imageviewFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
