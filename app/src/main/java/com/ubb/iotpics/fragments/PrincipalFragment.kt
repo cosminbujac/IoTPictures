@@ -100,6 +100,7 @@ class PrincipalFragment:Fragment() {
             camSetup()
             unsubscribe()
             subscribe(REQUEST_TOPIC)
+            binding.edittextPubtopic.setText(RESPONSE_TOPIC)
             binding.edittextSubtopic.setText(REQUEST_TOPIC)
         }
 
@@ -184,7 +185,12 @@ class PrincipalFragment:Fragment() {
             override fun onImageCaptured(image: File) {
                 Log.i("ImageCapture",image.name)
                lifecycleScope.launch{
-                   publish(RESPONSE_TOPIC,BitmapToMessageAdapter.adaptBitmapToMessage(BitmapFactory.decodeFile(image.path)))
+                   var response_topic:String? = null
+                   if(binding.edittextPubtopic.text !=null)
+                       response_topic = binding.edittextPubtopic.text.toString()
+                   else
+                       response_topic = RESPONSE_TOPIC
+                   publish(response_topic,BitmapToMessageAdapter.adaptBitmapToMessage(BitmapFactory.decodeFile(image.path)))
                    delay(200)
                    hiddenCam!!.stop()
                }
